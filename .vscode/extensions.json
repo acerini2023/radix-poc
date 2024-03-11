@@ -2,6 +2,7 @@
   "recommendations": [
     "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "vunguyentuan.vscode-css-variables"
   ]
 }

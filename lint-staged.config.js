@@ -12,12 +12,8 @@ const removeIgnoredFiles = async (files) => {
 export default {
   "**/*.{ts,tsx,js,jsx}": async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
-    return `eslint --fix --max-warnings=0 ${filesToLint}`;
+    return `eslint --fix --report-unused-disable-directives --max-warnings=0 ${filesToLint}`;
   },
-  "**/*.{ts,tsx}": async (files) => {
-    const filesToLint = await removeIgnoredFiles(files);
-    return `tsc-files --noEmit ${filesToLint}`;
-  },
-  "*.{css}": "stylelint --fix",
   "*.{ts,tsx,js,jsx,json,css}": "prettier --write",
+  "*.css": "stylelint --fix",
 };

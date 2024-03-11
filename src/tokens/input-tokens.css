@@ -1,0 +1,219 @@
+/* See Color Picker file for two ideas for how we had built the tokens to work, please do not feel obligated to use them, just offering them as ideas to help illustrate how they work */
+
+:root {
+  /* L1: Base Input Tokens */
+
+  --input-field-content-color: var(--text-color-02);
+  --input-field-content-color-error: var(--text-color-06);
+  --input-value-content-color: var(--text-color-01);
+  --input-placeholder-text-color: var(--text-color-03);
+  --input-background-color: var(--interactive-states-04-default);
+  --input-border-color: var(--interactive-border-interactive-border);
+  --input-border-color-error: var(--border-color-05);
+  --input-interactive-display-icon: var(
+    --interactive-utility-display-on-interaction
+  );
+  --input-control-color-01: var(--interactive-control-content-01);
+  --input-control-color-02: var(--interactive-container);
+  --input-control-color-03: var(--interactive-control-02);
+  --input-control-color-04: var(--text-color-01);
+  --input-control-background: var(--interactive-states-02-default);
+  --input-control-current: var(--selected-03);
+  --input-control-selected: var(--interactive-control-02);
+  --input-control-border-color-selected: var(--border-color-08);
+  --input-control-border-color: var(--border-color-01);
+  --input-control-border-color-alt: var(--border-color-04);
+  --input-control-icon-button-selected: var(--interactive-control-04);
+  --input-control-height: 20;
+  --input-control-width: 20;
+  --input-container-background-color: var(--ui-background-02);
+  --input-label-icon-color: var(--interactive-control-02);
+  --input-high-contrast-overlay: var(--interactive-overlay-01);
+  --input-dark-color-overlay: var(--interactive-overlay-03);
+  --input-container-border-color: var(--border-color-01);
+
+  /* L2: Input Object States Tokens */
+
+  --field-border-color: var(--input-border-color);
+  --footnote-text-color: var(--input-field-content-color);
+  --field-border-weight: 1;
+  --control-background-color-01: var(--input-control-color-02);
+  --control-background-color-02: var(--input-control-background);
+  --control-background-color-03: var(--interactive-container-02);
+  --control-indicator-color-01: var(--input-control-color-02);
+  --control-indicator-color-02: var(--input-control-color-03);
+  --control-indicator-color-03: var(--input-control-background);
+  --control-knob-background-color: var(--input-control-color-01);
+  --control-text-color: var(--input-control-color-04);
+  --error-message-text: #fff0;
+  --selected-display-icon: var(--input-interactive-display-icon);
+  --input-control-action-background-color: var(--input-control-color-01);
+  --knob-background-color: var(--interactive-container);
+  --control-overlay: var(--input-high-contrast-overlay);
+}
+
+/* L2: Input Object States Tokens */
+
+.error {
+  --field-border-color: var(--input-border-color-error);
+  --footnote-text-color: var(--input-field-content-color);
+  --field-border-weight: 2;
+  --control-background-color-01: var(--input-control-color-02);
+  --control-background-color-02: var(--input-control-background);
+  --control-background-color-03: var(--interactive-container-02);
+  --control-indicator-color-01: var(--input-control-color-02);
+  --control-indicator-color-02: var(--input-control-color-03);
+  --control-indicator-color-03: var(--input-control-background);
+  --control-knob-background-color: var(--input-control-color-01);
+  --control-text-color: var(--input-control-color-04);
+  --error-message-text: var(--input-field-content-color-error);
+  --selected-display-icon: var(--input-interactive-display-icon);
+  --input-control-action-background-color: var(--input-control-color-01);
+  --knob-background-color: var(--interactive-control-content-01);
+  --control-overlay: var(--input-high-contrast-overlay);
+}
+
+.selected {
+  --field-border-color: var(--input-control-border-color-selected);
+  --footnote-text-color: var(--input-field-content-color);
+  --field-border-weight: 2;
+  --control-background-color-01: var(--input-control-selected);
+  --control-background-color-02: var(--input-control-selected);
+  --control-background-color-03: var(--input-control-icon-button-selected);
+  --control-indicator-color-01: var(--input-control-color-02);
+  --control-indicator-color-02: var(--input-control-color-03);
+  --control-indicator-color-03: var(--input-control-color-01);
+  --control-knob-background-color: var(--input-control-color-02);
+  --control-text-color: var(--input-control-color-02);
+  --error-message-text: #0000;
+  --selected-display-icon: var(--input-value-content-color);
+  --input-control-action-background-color: var(
+    --input-control-icon-button-selected
+  );
+  --knob-background-color: var(--input-control-color-01);
+  --control-overlay: #fff0;
+}
+
+/* VARIATION TOKENS */
+
+/*
+--color-background-color: var(--input-background-color);
+--color-swatch-height: var(--space-x-large);
+--color-swatch-width: var(--space-x-large);
+--color-swatch-border-radius: var(--border-radius-x-small);
+--color-border-color: var(--input-container-border-color);
+--color-border-radius: var(--border-radius-small);
+--color-padding: var(--space-base);
+--input-background-color: var(--input-background-color);
+--label-text-color: var(--input-field-content-color);
+--label-padding-vertical: var(--space-xx-small);
+--label-padding-horizontal: var(--space-xx-small);
+--label-tooltip-icon-color: var(--input-label-icon-color);
+--footnote-padding-vertical: var(--space-small);
+--footnote-padding-horizontal: var(--space-x-small);
+--textbox-border-radius: var(--border-radius-small);
+--textbox-border-color: var(--field-border-color);
+--textbox-height: var(--size-x-large);
+--textbox-gap: var(--space-x-small);
+--textbox-text-color: var(--input-value-content-color);
+--textbox-font-weight: var(--font-weight-200);
+--textbox-font-weight-placeholder: var(--font-weight-100);
+--textbox-text-color-placeholder: var(--input-placeholder-text-color);
+--textbox-background-color: var(--input-background-color);
+--textbox-padding-left: var(--space-x-small);
+--textbox-button-control-content-color: var(--input-value-content-color);
+--textbox-padding-vertical: var(--space-x-small);
+--textbox-padding-right: var(--space-small);
+--textbox-button-control-border-radius: var(--border-radius-x-small);
+--textbox-button-control-background-color: #FFFFFF;
+--textbox-popover-background-color: var(--ui-background-01);
+--textbox-button-control-selected-content-color-interactive-display: var(--selected-display-icon);
+--value-padding-vertical: var(--space-small);
+--value-padding-horizontal: var(--space-small);
+--field-gap-horizontal: var(--space-base);
+--field-gap-vertical: var(--space-small);
+--field-field-error-text-color: var(--error-message-text);
+--input-border-color: var(--field-border-color);
+--input-padding: var(--space-x-small);
+--input-height: var(--size-x-large);
+--input-gap: var(--space-x-small);
+--input-text-color: var(--input-value-content-color);
+--input-font-weight: var(--font-weight-200);
+--input-font-weight-placeholder: var(--font-weight-100);
+--input-text-color-placeholder: var(--input-placeholder-text-color);
+--select-input-background-color: var(--input-background-color);
+--select-input-border-radius: var(--border-radius-small);
+--select-drawer-background-color: var(--input-background-color);
+--select-drawer-border-color: var(--field-border-color);
+--select-drawer-padding: var(--space-small);
+--select-drawer-divider: var(--input-control-border-color);
+--select-drawer-padding-select-all: var(--space-x-small);
+--radio-control-background-color: var(--control-background-color-01);
+--radio-control-indicator--color: var(--control-indicator-color-01);
+--radio-control-border-color: var(--input-border-color);
+--radio-control-height: var(--input-control-height);
+--radio-control-width: var(--input-control-width);
+--radio-group-gap-vertical: var(--space-base);
+--radio-option-gap: var(--space-small);
+--radio-group-gap-horizontal: var(--space-small);
+--radio-option-text-color: var(--input-value-content-color);
+--checkbox-control-background-color: var(--control-background-color-01);
+--visual-picker-control-padding-horizontal: var(--space-base);
+--visual-picker-control-padding-vertical: var(--space-base);
+--visual-picker-control-gap: var(--space-small);
+--visual-picker-control-border-radius: var(--border-radius-small);
+--visual-picker-control-background-color: var(--input-background-color);
+--checkbox-control-indicator--color: var(--control-indicator-color-01);
+--checkbox-control-border-color: var(--input-border-color);
+--checkbox-control-height: var(--input-control-height);
+--checkbox-control-width: var(--input-control-width);
+--checkbox-option-text-color: var(--input-value-content-color);
+--checkbox-group-gap-vertical: var(--space-base);
+--checkbox-group-gap-horizontal: var(--space-small);
+--checkbox-option-label: var(--input-value-content-color);
+--checkbox-option-padding: var(--space-x-small);
+--checkbox-option-gap: var(--space-small);
+--visual-picker-footer-background-color: var(--ui-background-02);
+--visual-picker-footer-overlay-color: var(--interactive-overlay-01);
+--switch-background-color: var(--control-background-color-02);
+--switch-knob-background-color: var(--control-knob-background-color);
+--switch-border-color: var(--field-border-color);
+--switch-indicator-color: var(--input-control-selected);
+--visual-picker-control-border-color: var(--input-border-color);
+--switch-overlay-color: var(--control-overlay);
+--visual-picker-control-content-color: var(--input-value-content-color);
+--switch-height: var(--size-large);
+--switch-width: var(--size-xx-large);
+--switch-border-radius: var(--border-radius-round);
+--switch-knob-height: var(--size-medium);
+--switch-padding: var(--space-x-small);
+--switch-knob-width: var(--size-medium);
+--date-picker-gap-vertical: var(--space-x-small);
+--date-picker-gap-horizontal: var(--space-small);
+--date-picker-padding-horizontal: var(--space-small);
+--date-picker-padding-vertical: var(--space-small);
+--date-picker-content-color: var(--control-text-color);
+--date-picker-control-date-border-radius: var(--border-radius-round);
+--date-picker-control-date-height: var(--size-x-large);
+--date-picker-control-background-color: var(--control-background-color-01);
+--date-picker-control-date-width: var(--size-x-large);
+--date-picker-control-option-border-radius: var(--border-radius-small);
+--radio-option-padding: var(--space-x-small);
+--slider-background-color: var(--input-container-background-color);
+--slider-background-color-filled: var(--input-control-color-03);
+--slider-knob-background-color: var(--knob-background-color);
+--slider-border-color: var(--input-border-color);
+--slider-border-radius: var(--border-radius-base);
+--slider-knob-border-color: var(--input-control-border-color-alt);
+--slider-knob-indicator-color: var(--input-control-color-03);
+--slider-knob-border-radius: var(--border-radius-round);
+--input-action-content-color: var(--input-value-content-color);
+--input-action-border-radius: var(--value-x-small);
+--input-action-background-color: var(--control-background-color-03);
+--input-action-selected-content-color-interactive-display: var(--selected-display-icon);
+--visual-picker-control-icon-color: var(--control-indicator-color-02);
+--text-area-padding-left: var(--space-x-small);
+--text-area-padding-right: var(--space-small);
+--text-area-padding-top: var(--space-x-small);
+--text-area-padding-bottom: var(--space-small);
+*/

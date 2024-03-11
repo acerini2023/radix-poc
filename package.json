@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -33,14 +34,15 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "postcss": "^8.4.35",
     "prettier": "^3.2.5",
+    "prettier-plugin-css-order": "^2.0.1",
     "prettier-plugin-packagejson": "^2.4.12",
     "prettier-plugin-sort-json": "^3.1.0",
     "stylelint": "^16.2.1",
     "stylelint-config-css-modules": "^4.4.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-rem-over-px": "^1.0.1",
-    "tsc-files": "^1.1.4",
     "typescript": "5.3.3",
     "vite": "^5.1.6"
   }

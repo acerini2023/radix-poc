@@ -32,7 +32,12 @@
   ],
   "root": true,
   "rules": {
-    "@typescript-eslint/consistent-type-exports": "error",
+    "@typescript-eslint/consistent-type-exports": [
+      "error",
+      {
+        "fixMixedExportsWithInlineTypeSpecifier": true
+      }
+    ],
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {

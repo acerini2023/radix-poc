@@ -1,5 +1,9 @@
 {
   "experimentalTernaries": true,
   "jsonRecursiveSort": true,
-  "plugins": ["prettier-plugin-sort-json", "prettier-plugin-packagejson"]
+  "plugins": [
+    "prettier-plugin-sort-json",
+    "prettier-plugin-packagejson",
+    "prettier-plugin-css-order"
+  ]
 }

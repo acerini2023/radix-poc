@@ -2,6 +2,9 @@
   "extends": ["stylelint-config-standard", "stylelint-config-css-modules"],
   "plugins": ["stylelint-rem-over-px"],
   "rules": {
-    "rem-over-px/rem-over-px": true
+    "rem-over-px/rem-over-px": [
+      true,
+      { "ignore": ["border", "box-shadow", "width", "min-width", "max-width"] }
+    ]
   }
 }

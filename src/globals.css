@@ -1,12 +1,36 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  src: url("./assets/fonts/OpenSans-VariableFont_wdth_wght.ttf")
+    format("truetype");
+  font-family: "Open Sans";
 }
 
-body {
-  font-family: Roboto, sans-serif;
-  background-color: #f0f0f5;
-  -webkit-font-smoothing: antialiased;
-  padding: 2.5rem;
+@font-face {
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  src: url("./assets/fonts/OpenSans-Italic-VariableFont_wdth_wght.ttf")
+    format("truetype");
+  font-family: "Open Sans";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  color: var(--text-color-01);
+  /* stylelint-disable-next-line rem-over-px/rem-over-px */
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: var(--font-weight-300);
+  font-size: var(--font-size-500);
+  line-height: var(--line-height-150);
 }
