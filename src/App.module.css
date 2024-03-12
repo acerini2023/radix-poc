@@ -12,10 +12,21 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-base, 1rem);
-  margin-top: var(--space-xxx-large);
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .title {
   margin-left: var(--space-x-small, 0.25rem);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-break {
+  border-top: 1px solid var(--border-color-01, #dfe4e8);
+  padding-top: var(--space-large, 2rem);
 }
