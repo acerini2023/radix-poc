@@ -39,6 +39,10 @@
   width: 100%;
 }
 
+.select-item:hover {
+  background-color: var(--select-item-hover-background-color, #f5f8fa);
+}
+
 .select-icon-wrapper {
   display: flex;
   position: absolute;
