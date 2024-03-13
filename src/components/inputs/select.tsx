@@ -4,7 +4,9 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { clsx } from "clsx";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
-const Select = SelectPrimitive.Root;
+import st from "./select.module.css";
+
+const SelectRoot = SelectPrimitive.Root;
 
 const SelectGroup = SelectPrimitive.Group;
 
@@ -14,7 +16,11 @@ const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
 >(({ children, className, ...props }, ref) => (
-  <SelectPrimitive.Trigger className={clsx(className)} ref={ref} {...props}>
+  <SelectPrimitive.Trigger
+    className={clsx(st["select-trigger"], className)}
+    ref={ref}
+    {...props}
+  >
     {children}
     <SelectPrimitive.Icon asChild>
       <ChevronDown />
@@ -58,13 +64,15 @@ const SelectContent = React.forwardRef<
 >(({ children, className, position = "popper", ...props }, ref) => (
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
-      className={clsx(className)}
+      className={clsx(st["select-content"], className)}
       position={position}
       ref={ref}
       {...props}
     >
       <SelectScrollUpButton />
-      <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
+      <SelectPrimitive.Viewport className={st["select-viewport"]}>
+        {children}
+      </SelectPrimitive.Viewport>
       <SelectScrollDownButton />
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
@@ -83,10 +91,14 @@ const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
 >(({ children, className, ...props }, ref) => (
-  <SelectPrimitive.Item className={clsx(className)} ref={ref} {...props}>
-    <span>
+  <SelectPrimitive.Item
+    className={clsx(st["select-item"], className)}
+    ref={ref}
+    {...props}
+  >
+    <span className={st["select-icon-wrapper"]}>
       <SelectPrimitive.ItemIndicator>
-        <Check />
+        <Check className={st["select-icon"]} />
       </SelectPrimitive.ItemIndicator>
     </span>
 
@@ -104,11 +116,11 @@ const SelectSeparator = React.forwardRef<
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 
 export {
-  Select,
   SelectContent,
   SelectGroup,
   SelectItem,
   SelectLabel,
+  SelectRoot,
   SelectScrollDownButton,
   SelectScrollUpButton,
   SelectSeparator,

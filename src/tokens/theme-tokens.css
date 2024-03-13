@@ -444,7 +444,7 @@
 
 /* ---------------- Interaction --------------- */
 
-.hover {
+.citrus-interactive:hover {
   --interactive-overlay-01: #ffffff51;
   --interactive-overlay-02: #1e2c3814;
   --interactive-overlay-03: #ffffff28;
@@ -463,7 +463,7 @@
   --interactive-utility-display-on-interaction: var(--icon-color-04);
 }
 
-.focus {
+.citrus-interactive:focus {
   --interactive-overlay-01: #ffffff51;
   --interactive-overlay-02: #1e2c3814;
   --interactive-overlay-03: #ffffff28;
@@ -482,7 +482,7 @@
   --interactive-utility-display-on-interaction: var(--icon-color-04);
 }
 
-.active {
+.citrus-interactive:active {
   --interactive-overlay-01: #1e2c3805;
   --interactive-overlay-02: #1e2c381e;
   --interactive-overlay-03: #1e2c381e;

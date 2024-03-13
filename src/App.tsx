@@ -1,9 +1,26 @@
+import { useState } from "react";
+
 import st from "./App.module.css";
 import { Button, ButtonRow } from "./components/button";
-import { Input, InputWrapper, Label } from "./components/inputs";
+import {
+  Input,
+  InputWrapper,
+  Label,
+  type Option,
+  SelectBasic,
+} from "./components/inputs";
 import { Layout } from "./components/layout";
 
+const suffixOptions: Option[] = [
+  { label: "Jr.", value: "jr" },
+  { label: "Sr.", value: "sr" },
+  { label: "III", value: "iii" },
+  { label: "IV", value: "iv" },
+];
+
 const App = (): React.JSX.Element => {
+  const [suffix, setSuffix] = useState<string>("");
+
   return (
     <main className={st.main}>
       <div className={st.content}>
@@ -21,7 +38,12 @@ const App = (): React.JSX.Element => {
 
             <InputWrapper className={st["input-break"]}>
               <Label htmlFor="suffix">Suffix</Label>
-              <Input id="suffer" placeholder="--select--" type="text" />
+              <SelectBasic
+                onValueChange={setSuffix}
+                options={suffixOptions}
+                placeholder="Suffix"
+                value={suffix}
+              />
             </InputWrapper>
 
             <InputWrapper>

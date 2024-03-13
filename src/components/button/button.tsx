@@ -10,7 +10,11 @@ export interface ButtonProps
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, ...props }, ref) => {
     return (
-      <button className={clsx(st.button, className)} ref={ref} {...props}>
+      <button
+        className={clsx(st.button, "citrus-interactive", className)}
+        ref={ref}
+        {...props}
+      >
         {children}
       </button>
     );

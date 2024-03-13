@@ -3,6 +3,7 @@
   border-radius: var(--textbox-border-radius, 8px);
   padding: var(--textbox-padding, 0.5rem) 0.75rem;
   width: 100%;
+  height: var(--size-x-large, 2.5rem);
   color: var(--textbox-text-color, #000);
   font-weight: var(--font-weight-200);
   font-size: var(--font-size-100);

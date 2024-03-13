@@ -1,0 +1,54 @@
+.select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--select-input-border-color, #96a2ab);
+  border-radius: var(--select-input-border-radius, 8px);
+  background: var(--select-input-background-color, #fff);
+  padding: var(--value-padding-vertical, 0.5rem) 0.75rem;
+  width: 100%;
+  height: var(--size-x-large, 2.5rem);
+  color: var(--input-text-color, #000);
+  font-weight: var(--font-weight-200);
+  font-size: var(--font-size-100);
+}
+
+.select-trigger[data-placeholder] {
+  color: var(--textbox-text-color-placeholder, #42505c);
+  font-weight: var(--font-weight-100);
+}
+
+.select-viewport {
+  margin-top: var(--space-x-small, 0.25rem);
+  border: 1px solid var(--select-input-border-color, #96a2ab);
+  border-radius: var(--select-input-border-radius, 0.5rem);
+  background-color: var(--select-input-background-color, #fff);
+  padding: var(--space-x-small, 0.25rem);
+  width: 100%;
+  min-width: var(--radix-select-trigger-width);
+  height: var(--radix-select-trigger-height);
+}
+
+.select-item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 0.25rem;
+  padding-left: 2rem;
+  padding-block: 0.5rem;
+  width: 100%;
+}
+
+.select-icon-wrapper {
+  display: flex;
+  position: absolute;
+  left: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-icon {
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+}
