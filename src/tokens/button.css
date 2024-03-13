@@ -75,7 +75,7 @@
   --button-icon-color: var(--button-content-02);
 }
 
-.citrus-button-borderless {
+.citrus-button-ghost {
   --button-text-color: var(--button-content-02);
   --button-border-color: var(--button-border-color-01);
   --button-overlay: var(--button-overlay-01);

@@ -43,7 +43,15 @@ const App = (): React.JSX.Element => {
               >
                 Cancel
               </Button>
-              <Button type="submit">Add Employee</Button>
+
+              <Button
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
+                type="submit"
+              >
+                Add Employee
+              </Button>
             </ButtonRow>
           </form>
         </Layout>

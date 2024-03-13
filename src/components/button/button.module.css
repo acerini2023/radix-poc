@@ -10,7 +10,7 @@
   padding-inline: var(--button-padding-horizontal, 1rem);
   padding-block: var(--button-padding-vertical, 0.25rem);
   height: var(--button-height, 2rem);
-  color: var(--button-text-color);
+  color: var(--button-text-color, #003fb8);
   font-weight: var(--button-font-weight, 400);
   font-size: var(--button-font-size, 1rem);
   line-height: var(--line-height-100);
