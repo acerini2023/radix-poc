@@ -1,7 +1,3 @@
-@import url("../../assets/sass/main.scss");
-
-/* L1: Base Button Tokens */
-
 $button-content-01: $text-color-04;
 $button-content-02: $text-color-05;
 $button-border-color-01: #fff0;
@@ -81,36 +77,4 @@ $button-icon-color: $button-content-01;
   $button-overlay: $button-overlay-01;
   $button-background-color: $button-overlay;
   $button-icon-color: $button-content-02;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: $button-gap, 0.5rem;
-  cursor: pointer;
-  border: 1px solid $button-border-color;
-  border-radius: $button-border-radius, 999px;
-  background-color: $button-background-color;
-  padding-inline: $button-padding-horizontal, 1rem;
-  padding-block: $button-padding-vertical, 0.25rem;
-  height: $button-height, 2rem;
-  color: $button-text-color, #003fb8;
-  font-weight: $button-font-weight, 400;
-  font-size: $button-font-size, 1rem;
-  line-height: $line-height-100;
-}
-
-.button:focus-visible {
-  outline:
-    2px solid $interactive-utility-outer-focus-borde,
-    #007bff;
-  outline-offset: 1px;
-}
-
-.button-row {
-  display: flex;
-  justify-content: flex-end;
-  gap: $button-gap, 0.5rem;
-  width: 100%;
 }

@@ -444,7 +444,7 @@
 
 /* ---------------- Interaction --------------- */
 
-.citrus-interactive:hover {
+:global .citrus-interactive:hover {
   --interactive-overlay-01: #ffffff51;
   --interactive-overlay-02: #1e2c3814;
   --interactive-overlay-03: #ffffff28;
