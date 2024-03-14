@@ -1,0 +1,12 @@
+/* stylelint-disable selector-class-pattern */
+.tab-list {
+  display: flex;
+
+  &[data-orientation="horizontal"] {
+    border-bottom: 1px solid var(--border-color);
+
+    .react-aria-Tab {
+      border-bottom: 3px solid var(--border-color);
+    }
+  }
+}

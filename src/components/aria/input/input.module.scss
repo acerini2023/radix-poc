@@ -1,0 +1,14 @@
+.input {
+  border: 1px solid var(--textbox-border-color, #96a2ab);
+  border-radius: var(--textbox-border-radius, 8px);
+  padding: var(--textbox-padding, 0.5rem) 0.75rem;
+  width: 100%;
+  color: var(--textbox-text-color, #000);
+  font-weight: var(--font-weight-200);
+  font-size: var(--font-size-100);
+}
+
+.input:global(::placeholder) {
+  color: var(--textbox-text-color-placeholder, #42505c);
+  font-weight: var(--font-weight-100);
+}

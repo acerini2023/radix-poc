@@ -1,0 +1,39 @@
+.tab {
+  position: relative;
+  transition: color 200ms;
+  cursor: pointer;
+  outline: none;
+  padding: 0.625rem;
+  color: var(--text-color-base);
+
+  --border-color: transparent;
+
+  forced-color-adjust: none;
+
+  &[data-hovered],
+  &[data-focused] {
+    color: var(--text-color-hover);
+  }
+
+  &[data-selected] {
+    --border-color: var(--highlight-background);
+
+    color: var(--text-color);
+  }
+
+  &[data-disabled] {
+    color: var(--text-color-disabled);
+
+    &[data-selected] {
+      --border-color: var(--text-color-disabled);
+    }
+  }
+
+  &[data-focus-visible]::after {
+    position: absolute;
+    inset: 0.25rem;
+    border: 2px solid var(--focus-ring-color);
+    border-radius: 4px;
+    content: "";
+  }
+}

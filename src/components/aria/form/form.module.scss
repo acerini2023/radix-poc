@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form:global(::placeholder) {
+  color: var(--textbox-text-color-placeholder, #42505c);
+  font-weight: var(--font-weight-100);
+}

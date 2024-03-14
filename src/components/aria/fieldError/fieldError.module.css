@@ -1,0 +1,5 @@
+/* stylelint-disable block-no-empty */
+/* stylelint-disable selector-class-pattern */
+.fieldError {
+  color: var(--error-message-text);
+}
