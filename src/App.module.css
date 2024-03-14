@@ -26,7 +26,12 @@
   width: 100%;
 }
 
-.input-break {
+.input-break-bottom {
+  border-bottom: 1px solid var(--border-color-01, #dfe4e8);
+  padding-bottom: var(--space-large, 2rem);
+}
+
+.input-break-top {
   border-top: 1px solid var(--border-color-01, #dfe4e8);
   padding-top: var(--space-large, 2rem);
 }
