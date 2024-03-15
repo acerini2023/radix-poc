@@ -1,0 +1,58 @@
+@use 'src/assets/sass/abstracts' as *;
+
+.citrus-interactive:hover {
+  $interactive-overlay-01: #ffffff51;
+  $interactive-overlay-02: #1e2c3814;
+  $interactive-overlay-03: #ffffff28;
+  $interactive-overlay-04: $ui-background-03;
+  $interactive-overlay-semantic: $semantic-tint;
+  $interactive-overlay-messaging: $messaging-tint;
+  $interactive-border-interactive-border: $border-color-06;
+  $interactive-border-interactive-border-error: $error;
+  $interactive-control-content-01: $info-tint;
+  $interactive-control-02: $interactive-states-03;
+  $interactive-control-04: $interactive-states-03-hover;
+  $interactive-container: $ui-background-03;
+  $interactive-utility-focus-border-opacity: 0;
+  $interactive-utility-inner-focus-border: #fff0;
+  $interactive-utility-outer-focus-border: #fff0;
+  $interactive-utility-display-on-interaction: $icon-color-04;
+}
+
+.citrus-interactive:focus {
+  $interactive-overlay-01: #ffffff51;
+  $interactive-overlay-02: #1e2c3814;
+  $interactive-overlay-03: #ffffff28;
+  $interactive-overlay-04: $ui-background-03;
+  $interactive-overlay-semantic: $semantic-tint;
+  $interactive-overlay-messaging: $messaging-tint;
+  $interactive-border-interactive-border: $border-color-06;
+  $interactive-border-interactive-border-error: $error;
+  $interactive-control-content-01: $info-tint;
+  $interactive-control-02: $interactive-states-03;
+  $interactive-control-04: $interactive-states-03-hover;
+  $interactive-container: $ui-background-03;
+  $interactive-utility-focus-border-opacity: 100;
+  $interactive-utility-inner-focus-border: $border-color-02;
+  $interactive-utility-outer-focus-border: $interactive-states-03;
+  $interactive-utility-display-on-interaction: $icon-color-04;
+}
+
+.citrus-interactive:active {
+  $interactive-overlay-01: #1e2c3805;
+  $interactive-overlay-02: #1e2c381e;
+  $interactive-overlay-03: #1e2c381e;
+  $interactive-overlay-04: $info-lightest;
+  $interactive-overlay-semantic: $semantic-lightest;
+  $interactive-overlay-messaging: $messaging-lightest;
+  $interactive-border-interactive-border: $border-color-06;
+  $interactive-border-interactive-border-error: $error-darker;
+  $interactive-control-content-01: $info-lightest;
+  $interactive-control-02: $interactive-states-02;
+  $interactive-control-04: $interactive-states-03-active;
+  $interactive-container: $info-lightest;
+  $interactive-utility-focus-border-opacity: 0;
+  $interactive-utility-inner-focus-border: #fff0;
+  $interactive-utility-outer-focus-border: #fff0;
+  $interactive-utility-display-on-interaction: $icon-color-04;
+}

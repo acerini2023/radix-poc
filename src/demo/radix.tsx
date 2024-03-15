@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import st from "../App.module.css";
+import st from "../App.module.scss";
 import { Button, ButtonRow } from "../components/radix/button";
 import {
   Input,
