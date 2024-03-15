@@ -1,3 +1,5 @@
+@use 'src/assets/sass/abstracts' as *;
+
 .main {
   display: flex;
   flex-direction: column;
@@ -17,7 +19,7 @@
 }
 
 .title {
-  margin-left: var(--space-x-small, 0.25rem);
+  margin-left: $space-x-small;
 }
 
 .form {
@@ -27,11 +29,11 @@
 }
 
 .input-break-bottom {
-  border-bottom: 1px solid var(--border-color-01, #dfe4e8);
+  border-bottom: 1px solid $border-color-01;
   padding-bottom: var(--space-large, 2rem);
 }
 
 .input-break-top {
-  border-top: 1px solid var(--border-color-01, #dfe4e8);
-  padding-top: var(--space-large, 2rem);
+  border-top: 1px solid $border-color-01;
+  padding-top: $space-large;
 }

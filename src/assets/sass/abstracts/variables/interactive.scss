@@ -1,0 +1,19 @@
+@use './colors' as *;
+@use './theme-tokens' as *;
+
+$interactive-overlay-01: #fff0;
+$interactive-overlay-02: #fff0;
+$interactive-overlay-03: #fff0;
+$interactive-overlay-04: #fff0;
+$interactive-overlay-semantic: #1e2c3800;
+$interactive-overlay-messaging: #1e2c3800;
+$interactive-border-interactive-border: $border-color-04;
+$interactive-border-interactive-border-error: $border-color-05;
+$interactive-control-content-01: $interactive-states-01-default;
+$interactive-control-02: $interactive-states-01;
+$interactive-control-04: $interactive-states-03-default;
+$interactive-container: $interactive-states-04-default;
+$interactive-utility-focus-border-opacity: 0;
+$interactive-utility-inner-focus-border: #fff0;
+$interactive-utility-outer-focus-border: #fff0;
+$interactive-utility-display-on-interaction: #fff0;

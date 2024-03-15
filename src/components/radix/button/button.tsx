@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 import { clsx } from "clsx";
 
-import st from "./button.module.css";
+import st from "./button.module.scss";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
