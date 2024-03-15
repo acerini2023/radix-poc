@@ -1,0 +1,58 @@
+.select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $select-input-border-color;
+  border-radius: $select-input-border-radius;
+  background: $select-input-background-color;
+  padding: $value-padding-vertical 0.75rem;
+  width: 100%;
+  height: $size-x-large;
+  color: $input-text-color;
+  font-weight: $font-weight-200;
+  font-size: $font-size-100;
+}
+
+.select-trigger[data-placeholder] {
+  color: $textbox-text-color-placeholder;
+  font-weight: $font-weight-100;
+}
+
+.select-viewport {
+  margin-top: $space-x-small;
+  border: 1px solid $select-input-border-color;
+  border-radius: $select-input-border-radius;
+  background-color: $select-input-background-color;
+  padding: $space-x-small;
+  width: 100%;
+  min-width: $radix-select-trigger-width;
+  height: $radix-select-trigger-height;
+}
+
+.select-item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 0.25rem;
+  padding-left: 2rem;
+  padding-block: 0.5rem;
+  width: 100%;
+}
+
+.select-item:hover {
+  background-color: $select-item-hover-background-color;
+}
+
+.select-icon-wrapper {
+  display: flex;
+  position: absolute;
+  left: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-icon {
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+}

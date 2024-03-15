@@ -1,29 +1,32 @@
+@use "../../../assets/sass/abstracts" as *;
+@use "../../../assets/sass/components/buttons/buttons.scss" as *;
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--button-gap, 0.5rem);
+  gap: $button-gap;
   cursor: pointer;
-  border: 1px solid var(--button-border-color);
-  border-radius: var(--button-border-radius, 999px);
-  background-color: var(--button-background-color);
-  padding-inline: var(--button-padding-horizontal, 1rem);
-  padding-block: var(--button-padding-vertical, 0.25rem);
-  height: var(--button-height, 2rem);
-  color: var(--button-text-color, #003fb8);
-  font-weight: var(--button-font-weight, 400);
-  font-size: var(--button-font-size, 1rem);
-  line-height: var(--line-height-100);
+  border: 1px solid $button-border-color;
+  border-radius: $button-border-radius;
+  background-color: $button-background-color;
+  padding-inline: $button-padding-horizontal;
+  padding-block: $button-padding-vertical;
+  height: $button-height;
+  color: $button-text-color;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+  line-height: $line-height-100;
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--interactive-utility-outer-focus-borde, #007bff);
+  outline: 2px solid $interactive-utility-outer-focus-border;
   outline-offset: 1px;
 }
 
 .button-row {
   display: flex;
   justify-content: flex-end;
-  gap: var(--button-gap, 0.5rem);
+  gap: $button-gap;
   width: 100%;
 }
