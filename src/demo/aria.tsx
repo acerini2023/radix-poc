@@ -1,64 +1,48 @@
 import { useState } from "react";
 
-import st from "../App.module.scss";
-import { Button, ButtonRow } from "../components/aria/button";
-import { FieldError } from "../components/aria/fieldError";
-import { Form } from "../components/aria/form";
-import { Input } from "../components/aria/input";
-import { Label } from "../components/aria/label";
-import { Layout } from "../components/aria/layout";
-import { Select, SelectItem } from "../components/aria/select";
-import { TextField } from "../components/aria/textField";
+import { Radio, RadioGroup, Switch } from "@adobe/react-spectrum";
+
+import "../App.scss";
+import "../assets/sass/abstracts/variables/colors.scss";
+import "../assets/sass/abstracts/variables/fonts.scss";
+import "../assets/sass/abstracts/variables/grid.scss";
+import "../assets/sass/abstracts/variables/interactive.scss";
+import "../assets/sass/abstracts/variables/theme-tokens.scss";
+import "../assets/sass/base/disabled.scss";
+import "../assets/sass/base/interactive.scss";
+import "../assets/sass/base/semantic.scss";
+import { ButtonRow, type Size } from "../components/aria/button";
+import "../components/aria/button/button.scss";
+import Button from "../components/aria/button/button.tsx";
 
 const Aria = (): React.JSX.Element => {
-  const [isInvalid, setIsInvalid] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+  const [size, setSize] = useState<Size>("standard");
 
   return (
-    <main className={st.main}>
-      <div className={st.content}>
-        <h1 className={st.title}>Add Aria Employee</h1>
-        <Layout>
-          <Form className={isInvalid ? "error" : ""}>
-            <TextField
-              className={st["input-break-bottom"]}
-              isRequired
-              name="fullName"
-            >
-              <Label>Full Name</Label>
-              <Input placeholder="Enter employee's name..." />
-              <FieldError>
-                {({ validationDetails }) => {
-                  setIsInvalid(true);
-                  return validationDetails.valueMissing ?
-                      "This is an example of custom error message"
-                    : "";
-                }}
-              </FieldError>
-            </TextField>
-            <Select label="Suffix">
-              <SelectItem>Jr</SelectItem>
-              <SelectItem>Sr</SelectItem>
-              <SelectItem>iii</SelectItem>
-              <SelectItem>iv</SelectItem>
-            </Select>
-            <TextField isRequired name="email">
-              <Label>Email</Label>
-              <Input placeholder="email@email.com" type="email" />
-              <FieldError />
-            </TextField>
-            <TextField isRequired name="phone">
-              <Label>Phone Number</Label>
-              <Input placeholder="555-555-5555" type="tel" />
-              <FieldError />
-            </TextField>
-            <ButtonRow>
-              <Button type="reset" variant="outline">
-                Cancel
-              </Button>
-              <Button type="submit">Add Employee</Button>
-            </ButtonRow>
-          </Form>
-        </Layout>
+    <main className="main">
+      <div style={{ backgroundColor: "#666", marginRight: 100, padding: 10 }}>
+        <Switch isSelected={disabled} onChange={setDisabled}>
+          Disabled
+        </Switch>
+        <RadioGroup label="Button size" onChange={setSize} value={size}>
+          <Radio value="small">Small</Radio>
+          <Radio value="standard">Standard</Radio>
+          <Radio value="large">Large</Radio>
+        </RadioGroup>
+      </div>
+      <div className="content">
+        <ButtonRow>
+          <Button isDisabled={disabled} size={size} variant="borderless">
+            Cancel
+          </Button>
+          <Button isDisabled={disabled} size={size} variant="outline">
+            Cancel
+          </Button>
+          <Button isDisabled={disabled} size={size} variant="default">
+            Add Employee
+          </Button>
+        </ButtonRow>
       </div>
     </main>
   );

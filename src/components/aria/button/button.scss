@@ -1,0 +1,19 @@
+.citrus-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--button-gap);
+  cursor: pointer;
+  border-radius: var(--button-border-radius);
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: var(--button-border-color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  padding-inline: var(--button-padding-horizontal);
+  padding-block: var(--button-padding-vertical);
+  height: var(--button-height);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  line-height: var(--line-height-100);
+}

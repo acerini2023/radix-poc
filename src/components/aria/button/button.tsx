@@ -8,7 +8,8 @@ import {
 
 import type { Size, Variant } from "./types";
 
-import st from "./button.module.scss";
+import "../../../assets/sass/components/buttons/buttons.scss";
+import "./button.scss";
 
 export interface ButtonProps extends AriaButtonProps {
   size?: Size;
@@ -17,19 +18,18 @@ export interface ButtonProps extends AriaButtonProps {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, ...props }, ref) => {
-    let variantCss = "";
-    switch (props.variant) {
-      case "borderless":
-        variantCss = "citrus-button-ghost";
-        break;
-      case "outline":
-        variantCss = "citrus-button-outline";
-        break;
-    }
+    const variantClass = props.variant ? props.variant : "";
+    const sizeClass = props.size ? props.size : "";
 
     return (
       <RACButton
-        className={clsx(st.button, "citrus-interactive", variantCss, className)}
+        className={clsx(
+          "citrus-button",
+          variantClass,
+          sizeClass,
+          "citrus-interactive",
+          className,
+        )}
         ref={ref}
         {...props}
       >

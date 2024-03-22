@@ -1,82 +1,83 @@
-@use 'src/assets/sass/abstracts' as *;
+:root {
+  --button-content-01: var(--text-color-04);
+  --button-content-02: var(--text-color-05);
+  --button-border-color-01: #fff0;
+  --button-border-color-02: var(--border-color-08);
+  --button-overlay-01: var(--interactive-overlay-04);
+  --button-background-color-01: var(--interactive-control-02);
 
-$button-content-01: $text-color-04;
-$button-content-02: $text-color-05;
-$button-border-color-01: #fff0;
-$button-border-color-02: $border-color-08;
-$button-overlay-01: $interactive-overlay-04;
-$button-background-color-01: $interactive-control-02;
+  /* L2: Button Size Dependent */
 
-/* L2: Button Size Dependent */
+  --icon-button-width: var(--size-large);
+  --icon-button-icon-size: 14;
+  --button-height: var(--size-large);
+  --button-border-radius: var(--border-radius-round);
+  --button-font-size: var(--font-size-075);
+  --button-icon-size: var(--font-size-050);
+  --button-font-weight: var(--font-weight-300);
+  --button-gap: var(--space-small);
+  --button-padding-right: var(--space-base);
+  --button-padding-left: var(--space-x-small);
+  --button-padding-vertical: var(--space-x-small);
+  --button-padding-horizontal: var(--space-base);
 
-$icon-button-width: $size-large;
-$icon-button-icon-size: 14;
-$button-height: $size-large;
-$button-border-radius: $border-radius-round;
-$button-font-size: $font-size-075;
-$button-icon-size: $font-size-050;
-$button-font-weight: $font-weight-300;
-$button-gap: $space-small;
-$button-padding-right: $space-base;
-$button-padding-left: $space-x-small;
-$button-padding-vertical: $space-x-small;
-$button-padding-horizontal: $space-base;
+  /* L2: Button Type Dependent Tokens */
+  --button-text-color: var(--button-content-01);
+  --button-border-color: var(--button-border-color-01);
+  --button-overlay: #fff0;
+  --button-background-color: var(--button-background-color-01);
+  --button-icon-color: var(--button-content-01);
 
-/* L2: Button Type Dependent Tokens */
-$button-text-color: $button-content-01;
-$button-border-color: $button-border-color-01;
-$button-overlay: #fff0;
-$button-background-color: $button-background-color-01;
-$button-icon-color: $button-content-01;
+  /* ------- */
 
-/* BUTTON SIZE */
+  /* BUTTON SIZE */
 
-.citrus-button-small {
-  $icon-button-width: $size-medium;
-  $icon-button-icon-size: 12;
-  $button-height: $size-medium;
-  $button-border-radius: $border-radius-round;
-  $button-font-size: $font-size-050;
-  $button-icon-size: $font-size-050;
-  $button-font-weight: $font-weight-300;
-  $button-gap: $space-x-small;
-  $button-padding-right: $space-small;
-  $button-padding-left: $space-x-small;
-  $button-padding-vertical: $space-x-small;
-  $button-padding-horizontal: $space-small;
 }
 
-.citrus-button-large {
-  $icon-button-width: $size-x-large;
-  $icon-button-icon-size: 16;
-  $button-height: $size-x-large;
-  $button-border-radius: $border-radius-round;
-  $button-font-size: $font-size-100;
-  $button-icon-size: $font-size-050;
-  $button-font-weight: $font-weight-300;
-  $button-gap: $space-small;
-  $button-padding-right: $space-base;
-  $button-padding-left: $space-small;
-  $button-padding-vertical: $space-small;
-  $button-padding-horizontal: $space-medium;
+.small {
+  --icon-button-width: var(--size-medium);
+  --icon-button-icon-size: 12;
+  --button-height: var(--size-medium);
+  --button-border-radius: var(--border-radius-round);
+  --button-font-size: var(--font-size-050);
+  --button-icon-size: var(--font-size-050);
+  --button-font-weight: var(--font-weight-300);
+  --button-gap: var(--space-x-small);
+  --button-padding-right: var(--space-small);
+  --button-padding-left: var(--space-x-small);
+  --button-padding-vertical: var(--space-x-small);
+  --button-padding-horizontal: var(--space-small);
 }
 
-/* ------- */
+.large {
+  --icon-button-width: var(--size-x-large);
+  --icon-button-icon-size: 16;
+  --button-height: var(--size-x-large);
+  --button-border-radius: var(--border-radius-round);
+  --button-font-size: var(--font-size-100);
+  --button-icon-size: var(--font-size-050);
+  --button-font-weight: var(--font-weight-300);
+  --button-gap: var(--space-small);
+  --button-padding-right: var(--space-base);
+  --button-padding-left: var(--space-small);
+  --button-padding-vertical: var(--space-small);
+  --button-padding-horizontal: var(--space-medium);
+}
 
 /* BUTTON TYPE */
 
-.citrus-button-outline {
-  $button-text-color: $button-content-02;
-  $button-border-color: $button-border-color-02;
-  $button-overlay: $button-overlay-01;
-  $button-background-color: $button-overlay-01;
-  $button-icon-color: $button-content-02;
+.outline {
+  --button-text-color: var(--button-content-02);
+  --button-border-color: var(--button-border-color-02);
+  --button-overlay: var(--button-overlay-01);
+  --button-background-color: var(--button-overlay-01);
+  --button-icon-color: var(--button-content-02);
 }
 
-.citrus-button-ghost {
-  $button-text-color: $button-content-02;
-  $button-border-color: $button-border-color-01;
-  $button-overlay: $button-overlay-01;
-  $button-background-color: $button-overlay;
-  $button-icon-color: $button-content-02;
+.borderless {
+  --button-text-color: var(--button-content-02);
+  --button-border-color: var(--button-border-color-01);
+  --button-overlay: var(--button-overlay-01);
+  --button-background-color: var(--button-overlay);
+  --button-icon-color: var(--button-content-02);
 }

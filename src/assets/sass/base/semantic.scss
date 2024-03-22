@@ -1,48 +1,46 @@
-@use 'src/assets/sass/abstracts' as *;
-
 /* -----------------  Semantic  ---------------- */
 .info {
-  $semantic-tint: $info-tint;
-  $semantic-lightest: $info-lightest;
-  $semantic-lighter: $info-lighter;
-  $semantic-light: $info-light;
-  $semantic-default: $info;
-  $semantic-dark: $info-dark;
-  $semantic-darker: $info-darker;
-  $semantic-darkest: $info-darkest;
+  --semantic-tint: var(--info-tint);
+  --semantic-lightest: var(--info-lightest);
+  --semantic-lighter: var(--info-lighter);
+  --semantic-light: var(--info-light);
+  --semantic-default: var(--info);
+  --semantic-dark: var(--info-dark);
+  --semantic-darker: var(--info-darker);
+  --semantic-darkest: var(--info-darkest);
 }
 
 .error {
-  $semantic-tint: $error-tint;
-  $semantic-lightest: $error-lightest;
-  $semantic-lighter: $error-lighter;
-  $semantic-light: $error-light;
-  $semantic-default: $error;
-  $semantic-dark: $error-dark;
-  $semantic-darker: $error-darker;
-  $semantic-darkest: $error-darkest;
+  --semantic-tint: var(--error-tint);
+  --semantic-lightest: var(--error-lightest);
+  --semantic-lighter: var(--error-lighter);
+  --semantic-light: var(--error-light);
+  --semantic-default: var(--error);
+  --semantic-dark: var(--error-dark);
+  --semantic-darker: var(--error-darker);
+  --semantic-darkest: var(--error-darkest);
 }
 
 .success {
-  $semantic-tint: $success-tint;
-  $semantic-lightest: $success-lightest;
-  $semantic-lighter: $success-lighter;
-  $semantic-light: $success-light;
-  $semantic-default: $success;
-  $semantic-dark: $success-dark;
-  $semantic-darker: $success-darker;
-  $semantic-darkest: $success-darkest;
+  --semantic-tint: var(--success-tint);
+  --semantic-lightest: var(--success-lightest);
+  --semantic-lighter: var(--success-lighter);
+  --semantic-light: var(--success-light);
+  --semantic-default: var(--success);
+  --semantic-dark: var(--success-dark);
+  --semantic-darker: var(--success-darker);
+  --semantic-darkest: var(--success-darkest);
 }
 
 .warning {
-  $semantic-tint: $warning-tint;
-  $semantic-lightest: $warning-lightest;
-  $semantic-lighter: $warning-lighter;
-  $semantic-light: $warning-light;
-  $semantic-default: $warning;
-  $semantic-dark: $warning-dark;
-  $semantic-darker: $warning-darker;
-  $semantic-darkest: $warning-darkest;
+  --semantic-tint: var(--warning-tint);
+  --semantic-lightest: var(--warning-lightest);
+  --semantic-lighter: var(--warning-lighter);
+  --semantic-light: var(--warning-light);
+  --semantic-default: var(--warning);
+  --semantic-dark: var(--warning-dark);
+  --semantic-darker: var(--warning-darker);
+  --semantic-darkest: var(--warning-darkest);
 }
 
 /* --------------------------------------------- */
@@ -50,47 +48,47 @@
 /* ----------------- Messaging ---------------- */
 
 .pending {
-  $messaging-tint: $pending-tint;
-  $messaging-lightest: $pending-lightest;
-  $messaging-lighter: $pending-lighter;
-  $messaging-light: $pending-light;
-  $messaging-default: $pending;
-  $messaging-dark: $pending-dark;
-  $messaging-darker: $pending-darker;
-  $messaging-darkest: $pending-darkest;
+  --messaging-tint: var(--pending-tint);
+  --messaging-lightest: var(--pending-lightest);
+  --messaging-lighter: var(--pending-lighter);
+  --messaging-light: var(--pending-light);
+  --messaging-default: var(--pending);
+  --messaging-dark: var(--pending-dark);
+  --messaging-darker: var(--pending-darker);
+  --messaging-darkest: var(--pending-darkest);
 }
 
 .neutral {
-  $messaging-tint: $neutral-tint;
-  $messaging-lightest: $neutral-01-lightest;
-  $messaging-lighter: $neutral-lighter;
-  $messaging-light: $neutral-light;
-  $messaging-default: $neutral;
-  $messaging-dark: $neutral-dark;
-  $messaging-darker: $neutral-darker;
-  $messaging-darkest: $neutral-darkest;
+  --messaging-tint: var(--neutral-tint);
+  --messaging-lightest: var(--neutral-01-lightest);
+  --messaging-lighter: var(--neutral-lighter);
+  --messaging-light: var(--neutral-light);
+  --messaging-default: var(--neutral);
+  --messaging-dark: var(--neutral-dark);
+  --messaging-darker: var(--neutral-darker);
+  --messaging-darkest: var(--neutral-darkest);
 }
 
 .at-01 {
-  $messaging-tint: $alt-01-tint;
-  $messaging-lightest: $alt-01-lightest;
-  $messaging-lighter: $alt-01-lighter;
-  $messaging-light: $alt-01-light;
-  $messaging-default: $alt-01;
-  $messaging-dark: $alt-01-dark;
-  $messaging-darker: $alt-01-darker;
-  $messaging-darkest: $alt-01-darkest;
+  --messaging-tint: var(--alt-01-tint);
+  --messaging-lightest: var(--alt-01-lightest);
+  --messaging-lighter: var(--alt-01-lighter);
+  --messaging-light: var(--alt-01-light);
+  --messaging-default: var(--alt-01);
+  --messaging-dark: var(--alt-01-dark);
+  --messaging-darker: var(--alt-01-darker);
+  --messaging-darkest: var(--alt-01-darkest);
 }
 
 .alt-02 {
-  $messaging-tint: $alt-02-tint;
-  $messaging-lightest: $alt-02-lightest;
-  $messaging-lighter: $alt-02-lighter;
-  $messaging-light: $alt-02-light;
-  $messaging-default: $alt-02;
-  $messaging-dark: $alt-02-dark;
-  $messaging-darker: $alt-02-darker;
-  $messaging-darkest: $alt-02-darkest;
+  --messaging-tint: var(--alt-02-tint);
+  --messaging-lightest: var(--alt-02-lightest);
+  --messaging-lighter: var(--alt-02-lighter);
+  --messaging-light: var(--alt-02-light);
+  --messaging-default: var(--alt-02);
+  --messaging-dark: var(--alt-02-dark);
+  --messaging-darker: var(--alt-02-darker);
+  --messaging-darkest: var(--alt-02-darkest);
 }
 
 /* --------------------------------------------- */
