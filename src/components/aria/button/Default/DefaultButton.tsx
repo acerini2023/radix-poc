@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
 import Button, { type ButtonProps } from "../button.tsx";
+import './defaultButton.scss';
 
 export interface DefaultButtonProps extends ButtonProps {}
 

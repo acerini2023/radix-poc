@@ -8,7 +8,6 @@ import {
 
 import type { Size, Variant } from "./types";
 
-import "../../../assets/sass/components/buttons/buttons.scss";
 import "./button.scss";
 
 export interface ButtonProps extends AriaButtonProps {
@@ -20,14 +19,16 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, ...props }, ref) => {
     const variantClass = props.variant ? props.variant : "";
     const sizeClass = props.size ? props.size : "";
+    const disabledClass = props.isDisabled ? "citrus-disabled" : "";
 
     return (
       <RACButton
         className={clsx(
-          "citrus-button",
+          `citrus-button`,
           variantClass,
           sizeClass,
           "citrus-interactive",
+          disabledClass,
           className,
         )}
         ref={ref}

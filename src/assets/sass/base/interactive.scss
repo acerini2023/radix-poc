@@ -1,75 +1,57 @@
-.citrus-interactive:hover {
-  --interactive-overlay-01: #ffffff51;
-  --interactive-overlay-02: #1e2c3814;
-  --interactive-overlay-03: #ffffff28;
-  --interactive-overlay-04: var(--ui-background-03);
-  --interactive-overlay-semantic: var(--semantic-tint);
-  --interactive-overlay-messaging: var(--messaging-tint);
-  --interactive-border-interactive-border: var(--border-color-06);
-  --interactive-border-interactive-border-error: var(--error);
-  --interactive-control-content-01: var(--info-tint);
-  --interactive-control-02: var(--interactive-states-03);
-  --interactive-control-04: var(--interactive-states-03-hover);
-  --interactive-container: var(--ui-background-03);
-  --interactive-utility-focus-border-opacity: 0;
-  --interactive-utility-inner-focus-border: #fff0;
-  --interactive-utility-outer-focus-border: #fff0;
-  --interactive-utility-display-on-interaction: var(--icon-color-04);
-}
 
-.citrus-interactive:focus {
-  --interactive-overlay-01: #ffffff51;
-  --interactive-overlay-02: #1e2c3814;
-  --interactive-overlay-03: #ffffff28;
-  --interactive-overlay-04: var(--ui-background-03);
-  --interactive-overlay-semantic: var(--semantic-tint);
-  --interactive-overlay-messaging: var(--messaging-tint);
-  --interactive-border-interactive-border: var(--border-color-06);
-  --interactive-border-interactive-border-error: var(--error);
-  --interactive-control-content-01: var(--info-tint);
-  --interactive-control-02: var(--interactive-states-03);
-  --interactive-control-04: var(--interactive-states-03-hover);
-  --interactive-container: var(--ui-background-03);
-  --interactive-utility-focus-border-opacity: 100;
-  --interactive-utility-inner-focus-border: var(--border-color-02);
-  --interactive-utility-outer-focus-border: var(--interactive-states-03);
-  --interactive-utility-display-on-interaction: var(--icon-color-04);
-}
+  .citrus-interactive:hover {
+    --interactive-overlay-01: #ffffff51;
+    --interactive-overlay-02: #1e2c3814;
+    --interactive-overlay-03: #ffffff28;
+    --interactive-overlay-04: var(--ui-background-03);
+    --interactive-overlay-semantic: var(--semantic-tint);
+    --interactive-overlay-messaging: var(--messaging-tint);
+    --interactive-border-interactive-border: var(--border-color-06);
+    --interactive-border-interactive-border-error: var(--error);
+    --interactive-control-content-01: var(--info-tint);
+    --interactive-control-02: var(--interactive-states-03);
+    --interactive-control-04: var(--interactive-states-03-hover);
+    --interactive-container: var(--ui-background-03);
+    --interactive-utility-focus-border-opacity: 0;
+    --interactive-utility-inner-focus-border: #fff0;
+    --interactive-utility-outer-focus-border: #fff0;
+    --interactive-utility-display-on-interaction: var(--icon-color-04);
+  }
 
-.citrus-interactive:active {
-  --interactive-overlay-01: #1e2c3805;
-  --interactive-overlay-02: #1e2c381e;
-  --interactive-overlay-03: #1e2c381e;
-  --interactive-overlay-04: var(--info-lightest);
-  --interactive-overlay-semantic: var(--semantic-lightest);
-  --interactive-overlay-messaging: var(--messaging-lightest);
-  --interactive-border-interactive-border: var(--border-color-06);
-  --interactive-border-interactive-border-error: var(--error-darker);
-  --interactive-control-content-01: var(--info-lightest);
-  --interactive-control-02: var(--interactive-states-02);
-  --interactive-control-04: var(--interactive-states-03-active);
-  --interactive-container: var(--info-lightest);
-  --interactive-utility-focus-border-opacity: 0;
-  --interactive-utility-inner-focus-border: #fff0;
-  --interactive-utility-outer-focus-border: #fff0;
-  --interactive-utility-display-on-interaction: var(--icon-color-04);
-}
+  .citrus-interactive:focus-visible {
+    --interactive-overlay-01: #ffffff51;
+    --interactive-overlay-02: #1e2c3814;
+    --interactive-overlay-03: #ffffff28;
+    --interactive-overlay-04: var(--ui-background-03);
+    --interactive-overlay-semantic: var(--semantic-tint);
+    --interactive-overlay-messaging: var(--messaging-tint);
+    --interactive-border-interactive-border: var(--border-color-06);
+    --interactive-border-interactive-border-error: var(--error);
+    --interactive-control-content-01: var(--info-tint);
+    --interactive-control-02: var(--interactive-states-03);
+    --interactive-control-04: var(--interactive-states-03-hover);
+    --interactive-container: var(--ui-background-03);
+    --interactive-utility-focus-border-opacity: 100;
+    --interactive-utility-inner-focus-border: var(--border-color-02);
+    --interactive-utility-outer-focus-border: var(--interactive-states-03);
+    --interactive-utility-display-on-interaction: var(--icon-color-04);
+  }
 
-.citrus-interactive:disabled {
-  --interactive-overlay-01: hotpink;
-  --interactive-overlay-02: hotpink;
-  --interactive-overlay-03: hotpink;
-  --interactive-overlay-04: hotpink;
-  --interactive-overlay-semantic: hotpink;
-  --interactive-overlay-messaging: hotpink;
-  --interactive-border-interactive-border: hotpink;
-  --interactive-border-interactive-border-error: hotpink;
-  --interactive-control-content-01: hotpink;
-  --interactive-control-02: hotpink;
-  --interactive-control-04: hotpink;
-  --interactive-container: hotpink;
-  --interactive-utility-focus-border-opacity: 0;
-  --interactive-utility-inner-focus-border: hotpink;
-  --interactive-utility-outer-focus-border: hotpink;
-  --interactive-utility-display-on-interaction: hotpink;
-}
+  .citrus-interactive:active {
+    --interactive-overlay-01: #1e2c3805;
+    --interactive-overlay-02: #1e2c381e;
+    --interactive-overlay-03: #1e2c381e;
+    --interactive-overlay-04: var(--info-lightest);
+    --interactive-overlay-semantic: var(--semantic-lightest);
+    --interactive-overlay-messaging: var(--messaging-lightest);
+    --interactive-border-interactive-border: var(--border-color-06);
+    --interactive-border-interactive-border-error: var(--error-darker);
+    --interactive-control-content-01: var(--info-lightest);
+    --interactive-control-02: var(--interactive-states-02);
+    --interactive-control-04: var(--interactive-states-03-active);
+    --interactive-container: var(--info-lightest);
+    --interactive-utility-focus-border-opacity: 0;
+    --interactive-utility-inner-focus-border: #fff0;
+    --interactive-utility-outer-focus-border: #fff0;
+    --interactive-utility-display-on-interaction: var(--icon-color-04);
+  }

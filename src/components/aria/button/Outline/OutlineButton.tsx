@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
 import Button, { type ButtonProps } from "../button.tsx";
+import './outlineButton.scss';
 
 export interface OutlineButtonProps extends ButtonProps {}
 

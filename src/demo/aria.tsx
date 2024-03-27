@@ -3,17 +3,14 @@ import { useState } from "react";
 import { Radio, RadioGroup, Switch } from "@adobe/react-spectrum";
 
 import "../App.scss";
-import "../assets/sass/abstracts/variables/colors.scss";
-import "../assets/sass/abstracts/variables/fonts.scss";
-import "../assets/sass/abstracts/variables/grid.scss";
-import "../assets/sass/abstracts/variables/interactive.scss";
-import "../assets/sass/abstracts/variables/theme-tokens.scss";
 import "../assets/sass/base/disabled.scss";
 import "../assets/sass/base/interactive.scss";
 import "../assets/sass/base/semantic.scss";
 import { ButtonRow, type Size } from "../components/aria/button";
-import "../components/aria/button/button.scss";
 import Button from "../components/aria/button/button.tsx";
+import BorderlessButton from "../components/aria/button/Borderless/BorderlessButton.tsx";
+import OutlineButton from "../components/aria/button/Outline/OutlineButton.tsx";
+import DefaultButton from "../components/aria/button/Default/DefaultButton.tsx";
 
 const Aria = (): React.JSX.Element => {
   const [disabled, setDisabled] = useState(false);
@@ -33,15 +30,15 @@ const Aria = (): React.JSX.Element => {
       </div>
       <div className="content">
         <ButtonRow>
-          <Button isDisabled={disabled} size={size} variant="borderless">
-            Cancel
-          </Button>
-          <Button isDisabled={disabled} size={size} variant="outline">
-            Cancel
-          </Button>
-          <Button isDisabled={disabled} size={size} variant="default">
-            Add Employee
-          </Button>
+          <BorderlessButton isDisabled={disabled} size={size}>
+            borderless
+          </BorderlessButton>
+          <OutlineButton isDisabled={disabled} size={size}>
+            outline
+          </OutlineButton>
+          <DefaultButton isDisabled={disabled} size={size}>
+            default
+          </DefaultButton>
         </ButtonRow>
       </div>
     </main>
